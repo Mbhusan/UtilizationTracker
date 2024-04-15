@@ -1,0 +1,18 @@
+<div class="common-table">
+  <p-table [value]="data" [scrollable]="true" [resizableColumns]="true" scrollHeight="700px">
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let header of tableHeaders">
+          {{ header }}
+          <p-columnFilter *ngIf="header !== 'Employee Id' && header !== 'Employee Name' && header !== 'Global Id' && header !== 'Email Ids'"></p-columnFilter>
+          <p-columnFilter *ngIf="header == 'Employee Id' || header == 'Employee Name' || header == 'Global Id' || header == 'Email Ids'" type="text" field="name" style="opacity: 0;"></p-columnFilter>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employee>
+      <tr>
+        <td *ngFor="let header of headers">{{ employee[header] }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

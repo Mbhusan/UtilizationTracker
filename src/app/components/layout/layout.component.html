@@ -1,0 +1,10 @@
+
+   <div class="card">
+    <p-tabView>
+      <p-tabPanel *ngFor="let tab of tabs" [header]="tab.header">
+        <app-common-table *ngIf="tab.component === 'CommonTable'" [headers]="tab.headers" [data]="employees"></app-common-table>
+        <app-splitter *ngIf="tab.component === 'Splitter'" [headers]="tab.headers" [data]="employees"></app-splitter>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  

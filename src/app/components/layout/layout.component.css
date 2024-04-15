@@ -1,0 +1,27 @@
+::ng-deep.p-tabview .p-tabview-nav {
+    border: none;
+    border-width: none;
+}
+
+ ::ng-deep.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+
+    border: 1px solid #0070ad;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    /* padding: 11px; */
+    /* margin-left: 0.5rem; */
+}
+
+::ng-deep.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    border: 1px solid #999999;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    /* padding: 11px */
+} 
+::ng-deep.p-column-filter-row .p-column-filter-menu-button, .p-column-filter-row .p-column-filter-clear-button {
+    display: none;
+}
+/* .p-tabview .p-tabview-panels{
+
+} */
+

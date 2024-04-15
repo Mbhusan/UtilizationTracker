@@ -1,0 +1,15 @@
+
+<!-- <p-splitter [panelSizes]="panelSizes" styleClass="mb-5">
+  <ng-template *ngFor="let header of tableHeader" pTemplate>
+    <app-common-table [headers]="header" [data]="data"></app-common-table>
+  </ng-template>
+</p-splitter> -->
+
+<div class="splitter">
+   <div class="small-splitter">
+     <app-common-table [headers]="tableHeader[0]" [data]="data"></app-common-table>
+   </div>
+   <div class="big-splitter">
+     <app-common-table [headers]="tableHeader[1]" [data]="data"></app-common-table>
+   </div>
+</div>

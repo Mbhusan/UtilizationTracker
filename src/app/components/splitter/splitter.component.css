@@ -1,0 +1,15 @@
+
+.splitter{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.small-splitter{
+  width: calc(30% - 3px);
+  border-right: 1px solid grey;
+  box-shadow:  3px 0 3px rgba(0, 0, 0, 0.2);
+  
+}
+.big-splitter{
+  width: 70%;
+}

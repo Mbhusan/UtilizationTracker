@@ -1,0 +1,36 @@
+<!-- <h1> dashboard</h1> -->
+<!-- <div style="background: red; height: 100%; "> -->
+
+<div class="dashNav">
+  <div class="custom-dropdown">
+    <div class="selected-option" (click)="toggleDropdown()">
+      {{ selectedOption }}
+      <span class="arrow"></span>
+    </div>
+
+    <ul *ngIf="isDropdownOpen" class="dropdown-options">
+      <li *ngFor="let option of options" (click)="selectOption(option)">{{ option }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="selectedOption === 'Utilization Tracker'">
+    <div class="utilization">
+      <span class="utilization-tracker">Utilization Tracker</span>
+    </div>
+    <div class="app-layout">
+      <app-layout></app-layout>
+    </div>
+  </div>
+  <div *ngIf="selectedOption === 'Deployment Summary'">
+    <div class="utilization">
+      <span class="utilization-tracker">Deployemnt Summary</span>
+   
+  <!-- <div *ngIf="selectedOption === 'Ageing'">
+    <h5>Ageing</h5>
+  </div> -->
+  <!-- <div class="navbar">
+    <button pButton type="button" label="General" class="p-button-outlined btn1"></button>
+    <button pButton type="button" label="Deployment Details" class="p-button-outlined btn2"></button>
+    <button pButton type="button" label="Ageing" class="p-button-outlined  btn3"></button>
+  </div> -->
+</div>
